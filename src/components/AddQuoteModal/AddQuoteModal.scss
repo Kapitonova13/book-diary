@@ -1,0 +1,50 @@
+.add-quote {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  &__title {
+    margin-bottom: 16px;
+    font-size: 20px;
+    color: var(--text-muted);
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 14px;
+
+    input,
+    textarea {
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg);
+      outline: none;
+      font-family: inherit;
+      resize: none;
+      color: var(--text-muted);
+
+      &:focus {
+        border-color: var(--primary);
+      }
+
+      &.is-invalid {
+        border-color: var(--danger);
+      }
+    }
+  }
+
+  &__error {
+    color: var(--danger);
+    font-size: 12px;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 8px;
+  }
+}

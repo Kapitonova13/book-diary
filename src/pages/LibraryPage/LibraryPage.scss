@@ -1,0 +1,15 @@
+.library {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    font-size: 26px;
+    color: var(--text-muted);
+  }
+}

@@ -1,0 +1,22 @@
+.stars {
+  display: inline-flex;
+  gap: 2px;
+
+  &__star {
+    font-size: 20px;
+    color: var(--border);
+    transition: color 0.15s;
+
+    &--filled {
+      color: #cd7979;
+    }
+
+    &:hover:not(:disabled) {
+      color: #f7e1db;
+    }
+  }
+
+  &--readonly &__star {
+    cursor: default;
+  }
+}

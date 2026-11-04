@@ -1,0 +1,42 @@
+.quote-card {
+  background: var(--surface);
+  border-left: 3px solid var(--primary);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &__book {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--primary);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    font-style: italic;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    color: var(--text);
+  }
+
+  &__meta {
+    display: flex;
+    gap: 16px;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  &__actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+  }
+}

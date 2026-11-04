@@ -1,0 +1,29 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 100;
+
+  &__content {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 24px;
+    width: 100%;
+    max-width: 480px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+  }
+
+  &__close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 18px;
+    color: var(--text-muted);
+  }
+}

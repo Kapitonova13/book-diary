@@ -1,0 +1,76 @@
+.add-book {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  &__title {
+    margin-bottom: 16px;
+    font-size: 20px;
+    color: var(--text-muted);
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 14px;
+
+    input,
+    select,
+    textarea {
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg);
+      outline: none;
+      resize: none;
+      color: var(--text-muted);
+
+      &:focus {
+        border-color: var(--primary);
+      }
+
+      &.is-invalid {
+        border-color: var(--danger);
+      }
+    }
+  }
+
+  &__error {
+    color: var(--danger);
+    font-size: 12px;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 8px;
+  }
+}
+
+.btn {
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.15s;
+
+  &--primary {
+    background: var(--primary);
+    color: #fff;
+
+    &:hover {
+      background: var(--primary-hover);
+    }
+  }
+
+  &--ghost {
+    background: var(--bg);
+    color: var(--text);
+
+    &:hover {
+      background: var(--border);
+    }
+  }
+}

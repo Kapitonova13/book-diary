@@ -1,0 +1,67 @@
+.book-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.15s, box-shadow 0.15s;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  &__cover {
+    height: 180px;
+    background: var(--cover);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      
+    }
+  }
+
+  &__placeholder {
+    font-size: 48px;
+    opacity: 0.4;
+  }
+
+  &__body {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-muted);
+  }
+
+  &__author {
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  &__badge {
+    align-self: flex-start;
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 5px;
+    background: var(--bg);
+    color: var(--text-muted);
+
+    &--want { background: #fff4e5; color: #eab05f; }
+    &--reading { background: #e5f6fb; color: #41badf; }
+    &--read { background: #e8f7e8; color: #63b063; }
+    &--dropped { background: #fbe9e9; color: #e87976; }
+  }
+}
