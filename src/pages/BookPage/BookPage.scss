@@ -51,10 +51,15 @@
   &__title {
     font-size: 24px;
     color: var(--text-muted);
+    overflow-wrap: break-word;
+    word-break: break-word;
+    
   }
 
   &__author {
     color: var(--text-muted);
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
 
   &__row {
@@ -89,6 +94,7 @@
     &:focus {
       border-color: var(--primary);
     }
+    
   }
 
   &__dates {

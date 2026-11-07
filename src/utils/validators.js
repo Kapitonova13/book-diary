@@ -1,10 +1,12 @@
 export const validateBook = ({ title, author, rating, status, finishedAt }) => {
   const errors = {}
-
+  console.log('длина', author.trim().length);
+  
   if (!title || !title.trim()) {
     errors.title = 'Название обязательно'
-  } else if (title.trim().length < 1 && title.trim().length > 1000) {
-    errors.title = 'Название должно быть от 1 до 1000 символов'
+  } else if (title.trim().length < 1 || title.trim().length > 500) {
+    console.log('!!длина');
+    errors.title = 'Название должно быть от 1 до 500 символов'
   }
 
   if (author && author.trim().length > 100) {
